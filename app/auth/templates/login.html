@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <!-- <h1>Sign In</h1>
+    <form action="" method="post" novalidate>
+        {# {{ form.hidden_tag() }} #}
+        <p>
+            {# {{ form.username.label }} #}<br>
+            {# {{ form.username(size=32) }} #}
+        </p>
+        <p>
+            {# {{ form.password.label }} #}<br> 
+            {#{{ form.password(size=32) }}#}
+        </p>
+        <p>{# {{ form.remember_me() }} {{ form.remember_me.label }} #}</p>
+        <p>{# {{ form.submit() }} #}</p>
+    </form>
+    
+    {# {% for message in get_flashed_messages() %} #}
+      <div class="alert-error">{#} {{ message }}#}</div>
+
+
+    {#{% endfor %} #}
+{#{{ form.hidden_tag() }}#} -->
+    <br>
+    <br>
+    <div class="container">
+        <form action="" method="post" novalidate>
+        <div class="row">
+          <div class="col-md-4 offset-md-4">
+            <div class="card text-center card  bg-default mb-3">
+              <div class="card-header">
+                LOGIN
+              </div>
+              <div class="card-body">
+                   <input type="text" name="userName" id="userName" class="form-control input-sm chat-input" placeholder="Username" />
+                </br>
+                <input type="password" name="password" id="userPassword" class="form-control input-sm chat-input" placeholder="Password" />
+              </div>
+              <div class="card-footer text-muted">
+                
+                <input type="submit" name="btn" value="Login" class="btn  btn-secondary float-right login_btn">
+              </div>
+            </div>
+            {% for message in get_flashed_messages() %} 
+      <div class="alert-error">{{ message }}</div>
+    {% endfor %}
+        </div>
+        </form>
+        
+        </div>
+     </div>
+    
+
+    
+
+
+
+{% endblock %}
+

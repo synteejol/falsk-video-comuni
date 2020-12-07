@@ -1,0 +1,23 @@
+
+<form class="row form-inline mb-3" action="/video" method="POST" enctype="multipart/form-data">
+
+    <div class="col-sm mt-2  form-group" >
+        
+    <label class="col-sm-1 mt-2" for="codice" >Codice:</label>
+    <input class="form-control col-sm-2 mt-2" type="text" id="codice" name="codice"  placeholder="Codice">
+
+    <label class="col-sm-1 mt-2" for="desc" >Descrizione:</label>
+    <input class="form-control col-sm-2 mt-2" type="text" id="desc" name="desc" placeholder="Descrizione">
+
+    <select class="selectpicker col-sm-3 mt-2" title="Sezione" data-selected-text-format="count" data-style="btn-dark" id="sez" name="sez">
+    {% for sez in sezioni %}
+        <option value="{{ sez.id }}">{{ sez.nome }}</option>
+        {% endfor %}
+      </select>
+        <div class="col-sm-2 mt-2">
+        <button  type="submit" class="btn btn-primary">Add</button>
+        </div>
+
+  
+  </div>
+  </form>

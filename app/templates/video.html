@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container mt-4">
+  
+  <h1>Video</h1>
+  {% include 'snippets/videoform.html' %}
+  {% if videos | length < 1 %}
+  <p>Non ci sono video.</p>
+  {% else %}
+  <table id="dtDynamicVerticalScrollExample" class="table table-striped table-bordered table-sm table-fixed mt-5" cellspacing="0"
+  width="100%">
+    <thead>
+      <tr>
+        <th>Codice</th>
+        <th>Sezione</th>
+        <th>Descrizione</th>
+
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for video in videos %}
+      <tr>
+        <!-- <td><a href="/update/{#{{ rinn.id }}#}">{#{{ rinn.nome }}#}</a></td> -->
+        
+        <td>{{ video.codice }}</td>
+        <td>{{ sez.query.filter_by(id=video.sez).first().nome}}</td>
+        <td>{{ video.desc}}</td>
+        
+        <td class="text-right"><a class="btn btn-danger btn-sm" href="/delete/{{ video.id }}" role="button">Delete</a></td>
+
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+  
+</div>
+
+{% endblock content %}
