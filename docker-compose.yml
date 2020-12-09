@@ -31,14 +31,15 @@ services:
     #image: alulim/flasklinef:0.4
     container_name: flaskVideoApp 
     ports:
-      - "5000:5000"
+      - "8000:8000"
       #- "127.0.0.1:5000:5000"
     
     # volumes:
     #   - ./app:/opt/app
     
     environment:
-      MYSQL_DATABASE: comunidb
+      # MYSQL_DATABASE: comunidb
+      DB_NAME: comunidb
       #MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
         #MYSQL_DATABASE: ${MYSQL_DATABASE}
       # MYSQL_USER: ${MYSQL_USER}
@@ -49,7 +50,7 @@ services:
       - dbapp
     # command: ls
     # command: /opt/app/wait.sh 
-    # command: gunicorn -b 0.0.0.0:5000 wsgi:app
+    command: gunicorn -b 0.0.0.0:8000 wsgi:app
     networks:
       - videoapp
 

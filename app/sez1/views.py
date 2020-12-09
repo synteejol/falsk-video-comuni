@@ -5,7 +5,7 @@ from models.models import Sezioni, Video
 sez1_bp = Blueprint('sez1_bp', __name__,
     template_folder='templates')
 
-@sez1_bp.route("/<int:id>")
+@sez1_bp.route("/sez/<int:id>")
 @fresh_login_required
 def view_home(id):
     
