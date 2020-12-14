@@ -1,5 +1,123 @@
-{% extends 'base.html' %} 
+{% extends 'base3.html' %} 
 
 {% block content %}
-<h5>Benvenuto</h5>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>QuivideoTV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script type="text/javascript" src="js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home_style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+</head>
+
+
+<!-- Start Site -->
+
+<body>
+    <!-- Navigation -->
+    <!-- <header>
+        <div class="header-grid">
+            <div class="header-logo">
+                <img src="https://i.ibb.co/8YSbYjm/logo-2x.png" alt="Image of the logo for the website">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a target="_blank" href="#">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#">Connect</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <p class="hero-title">Comune di ......</p>
+                    <div class=social-media>
+                        <a target="_blank" href="https://github.com/alexdavidjohnson">
+                            <i class="fab fa-github-alt"></i>
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/alex-david-johnson-3350782a">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a target="_blank" href="https://dribbble.com/thealxdavid">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="mailto:heyalxdavid@gmail.com">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Work Section -->
+        <section class="work-section">
+            <div class="section-title">
+  
+            </div>
+            <div class="work-grid">
+                
+                <div class="card-1 work-card" onclick="projectOne()">
+                    <h6 class="card-subhead">Video</h6>
+                    <p class="card-header">Consigli Comunali</p>
+                </div>
+                
+                <div class="card-2 work-card" onclick="projectTwo()">
+                    <h6 class="card-subhead">Video</h6>
+                    <p class="card-header">Sezione 2</p>
+                </div>
+                <div class="card-3 work-card" onclick="projectThree()">
+                    <h6 class="card-subhead">Video</h6>
+                    <p class="card-header">Eventi</p>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <!-- <footer>
+            <p>© COPYRIGHT 2020 Hirundinidae Società Cooperativa <span style="color: #e25555;">&#9829;</span></p>
+        </footer> -->
+    </main>
+</body>
+
+<script>
+
+$(document).ready(function () {
+    // Open in new window
+        $('.click').each(function() {
+        var link = $(this).html();
+        $(this).contents().wrap('<a href="google.com"></a>');
+        });
+});
+
+// Make Card One Clickable
+function projectOne() {
+    window.open("{{ url_for('sez1_bp.view_home', id=1) }}");
+}
+
+// Make Card Two Clickable
+function projectTwo() {
+    window.open("{{ url_for('sez1_bp.view_home', id=3) }}");
+}
+
+// Make Card Three Clickable
+function projectThree() {
+    window.open("https://github.com/alexdavidjohnson/Front-End-Portfolio-Project");
+}
+</script>
+
+</html>
+
 {% endblock content %}

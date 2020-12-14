@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/animazione1.css') }}">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
+        <!-- <link rel="stylesheet" href= "https://codepen.io/juliangarnier/pen/75efae7724dbc3c055e918057fc4aca5"> 
+        <script serc="https://codepen.io/juliangarnier/pen/75efae7724dbc3c055e918057fc4aca5"></script> -->
+        
+        
+
+
+        
+    </head>
+
+
+
+<body>
+
+
+    <h1>
+        <span class="letter">A</span>
+        <span class="letter">N</span>
+        <span class="letter">I</span>
+        <span class="letter">M</span>
+        <span class="letter">E</span>
+        <div></div>
+        <span class="letter">I</span>
+        <span class="letter">S</span>
+        <div></div>
+        <span class="letter">C</span>
+        <span class="letter">O</span>
+        <span class="letter">O</span>
+        <span class="letter">L</span>
+        <span class="letter">!</span>
+        </h1>
+        
+        
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+
+<script>
+
+
+    let animation = anime({
+      targets: '.letter',
+      opacity: 1,
+      translateY: 50, 
+      rotate: {
+        value: 360,
+        duration: 2000,
+        easing: 'easeInExpo'
+      }, 
+      scale: anime.stagger([0.7, 1], {from: 'center'}), 
+      delay: anime.stagger(100, {start: 1000}), 
+      translateX: [-10, 30]
+    });                
+    
+    
+      
+      
+    $(document).ready(function() {   //same as: $(function() { 
+     console.log("hi 1");
+});
+
+$(window).load(function() {
+     console.log("hi 2");
+});
+
+         
+    
+        
+        </script>
+
+</html>

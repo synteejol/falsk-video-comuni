@@ -46,9 +46,15 @@ app.register_blueprint(video_bp)
 
 
 @app.route("/")
-@fresh_login_required
+# @fresh_login_required
 def view_first_page():
+    return render_template("snippets/animazioneLogo.html", sezioni = Sezioni.query.all())
+
+@app.route("/home")
+
+def view_home_page():
     return render_template("home.html", sezioni = Sezioni.query.all())
+
 
 # @app.route("/second")
 # @fresh_login_required
@@ -69,7 +75,7 @@ def load_authuser(id):
 @app.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('view_first_page'))
+    return redirect(url_for('view_home_page'))
 
 if __name__ == '__main__':
 

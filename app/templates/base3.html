@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="X-UA-Compatible" content="ie-edge"/>
+    <meta name="description" content="An Amazing App is Waiting For You"/>
+	<meta name="keywords" content="app, seo, web positioning"/>
+  	<meta name="author" content="Yulian Brito"/>
+  	<title>QuivideoTV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base3.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400,500,700&amp;display=swap" rel="stylesheet"/>
+  </head>
+  <body class="body">
+  
+  <!-- Navigation -->
+  
+    <header class="header">
+      <nav class="navbar">
+        <input type="checkbox" id="check"/>
+        <label for="check" class="check-btn"><i class="check-btn__i fas fa-bars"></i></label>
+        <label class="brand"><a class="brand__link" href="#">QuivideoTV</a></label>
+        <div class="nav-wrapper">
+          <ul class="menu">
+            
+            <li class="menu__item"><a class="menu__link" href="{{ url_for('view_home_page') }}">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#features-section">CHI SIAMO</a></li>
+            <li class="menu__item"><a class="menu__link" href="#screenshots-section">CONTATTI</a></li>
+            
+            <li class="menu__item"><a class="menu__link" href="{{ url_for('auth_blueprint.login') }}">Area Riservata</a></li>
+            {% if not current_user.is_anonymous %}  
+            <li class="menu__item"><a class="menu__link" href="{{ url_for('sezioni_bp.sezioni') }}">Sezioni</a></li>
+            <li class="menu__item"><a class="menu__link" href="{{ url_for('video_bp.video') }}"> Video</a></li>
+              <li class="menu__item"><a class="menu__link" href="{{ url_for('logout') }}"> Logout</a></li>
+            
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    {% block content %}
+    
+    {% endblock %}
+    
+  
+    
+    <footer class="footer">
+      <div class="icons-social">
+        <ul class="list-social">
+          <li class="icons-social__item"><a class="icons-social__link" href="#"><i class="icons-social__i fab fa-codepen"></i></a></li>              
+          <li class="icons-social__item"><a class="icons-social__link" href="#"><i class="icons-social__i fab fa-instagram"></i></a></li>
+          <li class="icons-social__item"><a class="icons-social__link" href="#"><i class="icons-social__i fab fa-facebook"></i></a></li>
+          <li class="icons-social__item"><a class="icons-social__link" href="#"><i class="icons-social__i fab fa-twitter"></i></a></li>
+          <li class="icons-social__item"><a class="icons-social__link" href="#"><i class="icons-social__i fab fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="container-footer"> 
+        <p>Sviluppata da <a class="container-footer__link" href="https://codepen.io/Yulian_b/" target="_blank">Hirundinidae Società Cooperativa</a> | Copyright &copy; 2020</p>
+      </div>
+    </footer>
+  </body>
+</html>
