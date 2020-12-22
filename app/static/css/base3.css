@@ -1,376 +1,350 @@
 .body{ 
-    font-family:'Yantramanav', sans-serif;               
-    padding:0;
-    margin:0;
-    background-color:#f4f4f4;
-    font-size:16px;
-  }
+  font-family:'Yantramanav', sans-serif;               
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
+  font-size:16px;
+}
+
+/* ===========================
+    General Styles 
+============================ */
+
+
+
+/* ===========================
+    Header 
+============================ */
+
+.header{
+  width:100%;
+  height:80px;
+  position:fixed;
+  display:flex;
   
-  /* ===========================
-      General Styles 
-  ============================ */
-  
+}
+
+.navbar{
+  background:#d3d3d3;     
+  width:100%;
+}
+
+#check{
+  display:none;
+}
+
+.check-btn{
+  font-size:25px;
+  color:#000;
+  float:right;
+  line-height:80px;
+  margin-right:40px;
+  cursor:pointer;
+  display:none;
+}
+
+.brand{
+  color:#000;
+  font-size:20px;
+  line-height:80px;
+  padding:0 60px;
+  font-weight:bold;
+  margin-left:10px;
+}
+
+.brand__link{
+  color:#000;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-weight:700;
+  letter-spacing:0;
+}
+
+.nav-wrapper{
+  float:right;
+  padding:0;
+  margin:0;
+  line-height:80px;
+}
+
+.menu{
+  float:right;
+  padding:0px;
+  margin:0 20px 0 0; 
+}
+
+.menu__item{
+  float: left; 
+  display:inline-block;
+  margin:0 5px;
+}
+
+.menu__link{
+  color:#000;
+  font-size:16px;
+  font-weight:700;
+  padding:7px 13px;
+  border-radius:3px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+
+.menu__link:hover{
+  color:#f4363b;
+}
+
+/* ===========================
+    Masthead 
+============================ */
+
+
+
+/* ===========================
+   Features
+============================ */
+
+
  
-  
-  .container-1{
-    width:84%; 
-    margin:auto;
-    display:flex;
-    overflow:hidden;
-    align-items:center;
-    padding:0px 0px 80px 0px; 
-  }
-  
-  .container-1--container-2{
-    margin-top:35px;
-    padding:0; 
-  }
-  
-  .container-1--container-3{
-    margin-top:90px;
-    margin-bottom:0px; 
-    display:block; 
-  }
-  
-  .content__title{
-    text-transform:capitalize;
-    font:bold 32px Yantramanav; 
-    text-align:center;
-    margin-top:70px;
-    margin-bottom:0;
-  }
-  
-  .hr{
-    width:60px;
-    height:2px;
-    background-color:#f4363b;
-    border:0;
-    margin-bottom:50px; 
-  }
-  
-  /* ===========================
-      Header 
-  ============================ */
-  
+/* ===========================
+    Screenshots
+============================ */
+
+
+
+/* ===========================
+    Social
+============================ */
+
+.icons-social{
+  padding:5px;
+}
+
+.list-social{
+  text-align:center;
+  padding:0;
+}
+
+.icons-social__item{
+  display:inline-block;
+  transition:all 0.3s;
+  -webkit-transition:all 0.3s;
+  -moz-transition:all 0.3s;
+}
+
+.icons-social__item:hover {
+  transform:rotate(10deg);
+  -webkit-transform:rotate(10deg);
+}
+
+.icons-social__link{
+  font-size:23px;
+  color:#444442;
+  padding:10px;
+}
+
+.icons-social__link:hover{
+  color:#f4363b;
+}
+
+/* ===========================
+    FOOTER
+============================ */
+
+.footer{
+  padding:40px;
+  color:#444442;
+  text-align:center;
+  background:#ececec; 
+  margin:0;
+}
+
+.container-footer__link{
+  color:#444442;
+  text-decoration:none;
+}
+
+.container-footer__link:hover{
+  color:#f4363b;
+}
+
+/* ===========================
+    Media Queries
+============================ */
+
+@media (max-width: 1000px){
   .header{
-    width:100%;
-    height:80px;
-    position:fixed;
-    display:flex;
+    height:65px;
   }
-  
-  .navbar{
-    background:#d3d3d3;     
-    width:100%;
-  }
-  
-  #check{
-    display:none;
+
+  #check:checked ~ .nav-wrapper .menu{
+    left:0;
   }
   
   .check-btn{
-    font-size:25px;
-    color:#000;
-    float:right;
-    line-height:80px;
-    margin-right:40px;
-    cursor:pointer;
-    display:none;
+    display:block;
+    line-height:65px;
   }
   
   .brand{
-    color:#000;
-    font-size:20px;
-    line-height:80px;
-    padding:0 60px;
-    font-weight:bold;
-    margin-left:10px;
+    line-height:65px;
+    padding:0 30px;
+    margin-left:5px;
   }
-  
-  .brand__link{
-    color:#000;
-    text-decoration:none;
-    text-transform:uppercase;
-    font-weight:700;
-    letter-spacing:0;
-  }
-  
-  .nav-wrapper{
-    float:right;
-    padding:0;
-    margin:0;
-    line-height:80px;
-  }
-  
+
   .menu{
-    float:right;
-    padding:0px;
-    margin:0 20px 0 0; 
-  }
-  
-  .menu__item{
-    float:left; 
-    display:inline-block;
-    margin:0 5px;
-  }
-  
-  .menu__link{
-    color:#000;
-    font-size:16px;
-    font-weight:700;
-    padding:7px 13px;
-    border-radius:3px;
-    text-transform:uppercase;
-    text-decoration:none;
-  }
-  
-  .menu__link:hover{
-    color:#f4363b;
-  }
-  
-  /* ===========================
-      Masthead 
-  ============================ */
-  
- 
-  
-  /* ===========================
-     Features
-  ============================ */
-  
- 
-   
-  /* ===========================
-      Screenshots
-  ============================ */
-  
- 
-  
-  /* ===========================
-      Social
-  ============================ */
-  
-  .icons-social{
-    padding:5px;
-  }
-  
-  .list-social{
+    position:fixed;
+    width:100%;
+    /*height:20vh;*/
+    background:#dfdfdf; 
+    top:60px;
+    left:-100%;
     text-align:center;
+    transition:all .5s;
+    opacity:0.5;
+  }
+
+  .menu__item{
+    display:block;
+    margin:15px 0;
+    line-height:15px;
+    float:none;
+  }
+
+  .menu__link{
+    font-size:14px;
+  }
+ 
+
+  
+  .container-1{
+    display:block;
+    text-align:center;
+  }
+  
+
+  .btns{
+    width:100%;
+    margin-bottom:45px;
+  }
+  
+  .btns__item{ 
+    display:block;
+    margin:30px 0px;
+    width:99.7%;
+  }
+  
+  .btns__link{
+    width:100%;
+    display:block;
     padding:0;
   }
-  
-  .icons-social__item{
-    display:inline-block;
-    transition:all 0.3s;
-    -webkit-transition:all 0.3s;
-    -moz-transition:all 0.3s;
+
+  .features__title{
+    margin-bottom:15px;
+    text-align:left;
   }
   
-  .icons-social__item:hover {
-    transform:rotate(10deg);
-    -webkit-transform:rotate(10deg);
+  .features__paragraph{
+    text-align:left;
   }
   
-  .icons-social__link{
-    font-size:23px;
-    color:#444442;
-    padding:10px;
+  .icons-features__title{
+    width:100%;
+    text-align:left;
+  }
+ 
+
+}
+
+@media (max-width: 700px){
+  .col-right-2{     
+    height:490px;
   }
   
-  .icons-social__link:hover{
-    color:#f4363b;
+  .container__img-2{
+    width:485px;
+    height:485px;
+  }
+
+  .screenshots-img{
+    height:558px;
   }
   
-  /* ===========================
-      FOOTER
-  ============================ */
+  .container__img-3{
+    width:485px;
+    height:485px;
+  }
+}
+
+@media (max-width: 450px){
+  .header{
+    height:60px;
+  }
+
+  .check-btn{
+    font-size:20px;
+    line-height:60px;
+    margin-right:20px;
+  }
+  
+  .brand{  
+    font-size:17px;
+    line-height:60px;
+    padding:0 20px;
+  }  
+  
+  .content__title{
+    margin-top:35px;
+    font-size:26px; 
+  }
+
+  
+  .btns__item{ 
+    margin:15px 0px;
+    width:99.5%;
+  }
+  
+
+  
+
+ 
+  .icons-features{
+    margin-bottom:20px;
+    font-size:20px;
+  }
+
+
+   
+
+
+  .icons-social{
+    padding:0;
+  }
   
   .footer{
-    padding:40px;
-    color:#444442;
-    text-align:center;
-    background:#ececec; 
-    margin:0;
+    padding:32px;
   }
   
-  .container-footer__link{
-    color:#444442;
-    text-decoration:none;
+  .container-footer{
+    font-size:15px;
   }
-  
-  .container-footer__link:hover{
-    color:#f4363b;
+}
+
+@media (max-height: 450px){
+  .menu{
+    height:100vh;
   }
-  
-  /* ===========================
-      Media Queries
-  ============================ */
-  
-  @media (max-width: 1000px){
-    .header{
-      height:65px;
-    }
-  
-    #check:checked ~ .nav-wrapper .menu{
-      left:0;
-    }
-    
-    .check-btn{
-      display:block;
-      line-height:65px;
-    }
-    
-    .brand{
-      line-height:65px;
-      padding:0 30px;
-      margin-left:5px;
-    }
-  
-    .menu{
-      position:fixed;
-      width:100%;
-      height:25vh;
-      background:#dfdfdf; 
-      top:60px;
-      left:-100%;
-      text-align:center;
-      transition:all .5s;
-    }
-  
-    .menu__item{
-      display:block;
-      margin:15px 0;
-      line-height:15px;
-      float:none;
-    }
-  
-    .menu__link{
-      font-size:14px;
-    }
-   
-
-    
-    .container-1{
-      display:block;
-      text-align:center;
-    }
-    
-
-    .btns{
-      width:100%;
-      margin-bottom:45px;
-    }
-    
-    .btns__item{ 
-      display:block;
-      margin:30px 0px;
-      width:99.7%;
-    }
-    
-    .btns__link{
-      width:100%;
-      display:block;
-      padding:0;
-    }
-
-    .features__title{
-      margin-bottom:15px;
-      text-align:left;
-    }
-    
-    .features__paragraph{
-      text-align:left;
-    }
-    
-    .icons-features__title{
-      width:100%;
-      text-align:left;
-    }
-   
-
+ 
+  .menu__item{
+    margin:15px 0;
+    line-height:15px;
   }
-  
-  @media (max-width: 700px){
-    .col-right-2{     
-      height:490px;
-    }
-    
-    .container__img-2{
-      width:485px;
-      height:485px;
-    }
-  
-    .screenshots-img{
-      height:558px;
-    }
-    
-    .container__img-3{
-      width:485px;
-      height:485px;
-    }
+
+
+}
+
+@media (max-height: 700px){
+  .footer{
+    margin-top: 300px;
   }
-  
-  @media (max-width: 450px){
-    .header{
-      height:60px;
-    }
-  
-    .check-btn{
-      font-size:20px;
-      line-height:60px;
-      margin-right:20px;
-    }
-    
-    .brand{  
-      font-size:17px;
-      line-height:60px;
-      padding:0 20px;
-    }  
-    
-    .content__title{
-      margin-top:35px;
-      font-size:26px; 
-    }
-
-    
-    .btns__item{ 
-      margin:15px 0px;
-      width:99.5%;
-    }
-    
-
-    
-
-   
-    .icons-features{
-      margin-bottom:20px;
-      font-size:20px;
-    }
-  
-
-     
-
-
-    .icons-social{
-      padding:0;
-    }
-    
-    .footer{
-      padding:32px;
-    }
-    
-    .container-footer{
-      font-size:15px;
-    }
-  }
-  
-  @media (max-height: 450px){
-    .menu{
-      height:100vh;
-    }
-   
-    .menu__item{
-      margin:15px 0;
-      line-height:15px;
-    }
-  }
+}

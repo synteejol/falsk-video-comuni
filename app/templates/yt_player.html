@@ -1,0 +1,103 @@
+{% extends 'base3.html' %}  
+
+{% block content %}
+
+<!-- see http://www.woosterwebdesign.com/responsive-youtube-player-with-playlist/ -->
+
+<html>
+  <head>
+    <meta name="viewport" content="width=470, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi">
+  	<title>Demo: Responsive YouTube Player with Scrolling Thumbnail Playlist</title> 
+  	<link rel="stylesheet" href="css/font-awesome.min.css" />
+
+  
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ytp_style.css') }}">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+</head>
+
+
+<!-- Start Site -->
+
+<body>
+  
+    <!-- <main> -->
+      <!-- <div class="spazio">
+      </br>
+    </br>
+  </br>
+      </div> -->
+
+      <section class="container" >
+       
+        <div class="vid-container">
+          <iframe id="vid_frame" src="https://www.youtube.com/embed/{{ last.codice }}?rel=0&showinfo=0&autohide=1" frameborder="0" width="560" height="315" 
+          scrolling="0" ></iframe>
+      </div>
+  
+
+      <div class="vid-list-container">
+            <div class="vid-list">
+              {% for video in videos %}
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/{{ video.codice }}?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                   <div class="thumb"><img src="https://img.youtube.com/vi/{{ video.codice }}/default.jpg" ></div>
+                   <div class="desc">{{ video.desc}}</div>
+                 </div>
+                 {% endfor %}
+
+  
+           </div>
+          </div>
+  
+    
+          <div class="arrows">
+            <div class="arrow-left"><i class="fa fa-chevron-left fa-lg"></i></div>
+            <div class="arrow-right"><i class="fa fa-chevron-right fa-lg"></i></div>
+          </div>
+  
+        </section>
+      
+    <!-- </main> -->
+
+
+
+
+
+<!-- JS FOR SCROLLING THE ROW OF THUMBNAILS -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".arrow-right").bind("click", function (event) {
+        event.preventDefault();
+        $(".vid-list-container").stop().animate({
+            scrollLeft: "+=336"
+        }, 750);
+    });
+    $(".arrow-left").bind("click", function (event) {
+        event.preventDefault();
+        $(".vid-list-container").stop().animate({
+            scrollLeft: "-=336"
+        }, 750);
+    });
+});
+</script>
+
+
+<!-- google analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19095819-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+
+{% endblock content %}

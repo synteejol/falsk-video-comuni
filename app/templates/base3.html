@@ -4,19 +4,19 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <meta http-equiv="X-UA-Compatible" content="ie-edge"/>
-    <meta name="description" content="An Amazing App is Waiting For You"/>
-	<meta name="keywords" content="app, seo, web positioning"/>
-  	<meta name="author" content="Yulian Brito"/>
+
+	 <meta name="keywords" content="app, seo, web positioning"/>
+  	<meta name="author" content="Carmelo Marasco"/>
   	<title>QuivideoTV</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base3.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400,500,700&amp;display=swap" rel="stylesheet"/>
   </head>
-  <body class="body">
+  
   
   <!-- Navigation -->
-  
-    <header class="header">
+  <body class="body">
+    <header class="header" >
       <nav class="navbar">
         <input type="checkbox" id="check"/>
         <label for="check" class="check-btn"><i class="check-btn__i fas fa-bars"></i></label>
@@ -25,9 +25,8 @@
           <ul class="menu">
             
             <li class="menu__item"><a class="menu__link" href="{{ url_for('view_home_page') }}">Home</a></li>
-            <li class="menu__item"><a class="menu__link" href="#features-section">CHI SIAMO</a></li>
-            <li class="menu__item"><a class="menu__link" href="#screenshots-section">CONTATTI</a></li>
-            
+            <li class="menu__item"><a class="menu__link" href="#">CHI SIAMO</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">CONTATTI</a></li>
             <li class="menu__item"><a class="menu__link" href="{{ url_for('auth_blueprint.login') }}">Area Riservata</a></li>
             {% if not current_user.is_anonymous %}  
             <li class="menu__item"><a class="menu__link" href="{{ url_for('sezioni_bp.sezioni') }}">Sezioni</a></li>
@@ -40,10 +39,14 @@
       </nav>
     </header>
     
+    
+
+      
     {% block content %}
-    
+
     {% endblock %}
-    
+  
+
   
     
     <footer class="footer">

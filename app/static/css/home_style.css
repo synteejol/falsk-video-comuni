@@ -15,18 +15,18 @@
 /*  ---------------------- */
 /* Body Styles */
 /*  ---------------------- */
-body {
+/* body {
   margin: 0 0;
   line-height: 1.4;
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
-}
+} */
 
 /*  ---------------------- */
 /* Header / Navigation Section */
 /*  ---------------------- */
 
-header {
+/* header {
   min-height: 80px;
   width: 100%;
   background: var(--light);
@@ -71,13 +71,13 @@ header img {
   display: grid;
   align-content: center;
   justify-content: start;
-}
+} */
 
-.main-nav {
+/* .main-nav {
   display: grid;
   align-content: center;
   justify-content: end;
-}
+} */
 
 /*  ---------------------- */
 /* Hero Section */
@@ -94,7 +94,7 @@ header img {
   background-size: cover;
   color: var(--light);
   text-align: center;
-  margin: 0 0;
+  margin: 50 0;
   min-height: 616px;
 }
 
@@ -256,13 +256,13 @@ header img {
 /* Footer Section */
 /*  ---------------------- */
 
-footer {
+/* footer {
   text-align: center;
   color: var(--dark);
   font-weight: 400;
   font-size: 12px;
   margin: 2em;
-}
+} */
 
 /*  ---------------------- */
 /* Responsive Section */

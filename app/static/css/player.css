@@ -82,6 +82,7 @@ body {
   left: 0;
   width: 100%;
   min-height: 360px;
+  overflow: hidden;
 }
 
 
@@ -96,7 +97,7 @@ background: #222;
 }
 
 .vid-list-container:hover, .vid-list-container:focus {
- overflow-y: auto;
+ overflow-y: hidden;
 }
 
 ol#vid-list {

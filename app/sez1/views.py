@@ -9,5 +9,5 @@ sez1_bp = Blueprint('sez1_bp', __name__,
 # @fresh_login_required
 def view_home(id):
     
-    return render_template("index.html", sezioni = Sezioni.query.all(), videos= Video.query.filter_by(sez=id).all(), \
+    return render_template("yt_player.html", sezioni = Sezioni.query.all(), videos= Video.query.filter_by(sez=id).all(), \
         last = Video.query.filter_by(sez=id).order_by(Video.id.desc()).first())
