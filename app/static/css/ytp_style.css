@@ -25,7 +25,7 @@ body {
   min-width: 440px;
   background: #fff;
   margin: 0 auto;
-  height: 80vh;
+  height: 90vh;
   
  
   
@@ -157,7 +157,7 @@ body {
 }
 
 .vid-container {
-  padding-top: 180px;
+  padding-top: 90px;
 }
 
 /* reposition left/right arrows */
